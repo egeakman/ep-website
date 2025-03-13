@@ -18,7 +18,7 @@ build:
     # golang: "1.23"
 
   commands:
-    npm install -g pnpm@latest-10
-    pnpm install
-    pnpm build
-    cd dist && cp -r * $READTHEDOCS_OUTPUT/html
+    - npm install -g pnpm@latest-10
+    - pnpm install
+    - pnpm build
+    - cd dist && cp -r * $READTHEDOCS_OUTPUT/html
