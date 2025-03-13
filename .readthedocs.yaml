@@ -21,4 +21,5 @@ build:
     - npm install -g pnpm@latest-10
     - pnpm install
     - pnpm build
-    - cd dist && cp -r * _readthedocs/html/
+    - mkdir -p $READTHEDOCS_OUTPUT/html
+    - cd dist && cp -r * $READTHEDOCS_OUTPUT/html
