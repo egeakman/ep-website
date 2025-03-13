@@ -11,7 +11,9 @@ import metaTags from "astro-meta-tags";
 
 // https://astro.build/config
 export default defineConfig({
-  base: process.env.RTD_VERSION ? `/${process.env.RTD_VERSION}/` : '/',
+  build: {
+    assetsPrefix: "./",
+  },
   markdown: {
     remarkPlugins: [
       [
