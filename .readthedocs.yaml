@@ -23,3 +23,4 @@ build:
     - pnpm build
     - mkdir -p $READTHEDOCS_OUTPUT/html
     - cd dist && cp -r * $READTHEDOCS_OUTPUT/html
+    - cd $READTHEDOCS_OUTPUT/html && ls -la
