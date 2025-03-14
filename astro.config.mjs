@@ -11,9 +11,8 @@ import metaTags from "astro-meta-tags";
 
 // https://astro.build/config
 export default defineConfig({
-  build: {
-    assetsPrefix: "./",
-  },
+  base: process.env.READTHEDOCS_VERSION ? `/${process.env.READTHEDOCS_VERSION}/` : '/',
+  site: `https://ep-website-demo.readthedocs.io${process.env.READTHEDOCS_VERSION ? `/${process.env.READTHEDOCS_VERSION}` : ''}`,
   markdown: {
     remarkPlugins: [
       [
@@ -36,7 +35,7 @@ export default defineConfig({
       ],
     ],
   },
-  site: "https://ep2025.europython.eu",
+  // site: "https://ep2025.europython.eu",
   integrations: [
     mdx(),
     sitemap(),
